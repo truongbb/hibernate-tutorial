@@ -1,1 +1,1 @@
-# Hibernate-tut
+# Hibernate-tutorial
