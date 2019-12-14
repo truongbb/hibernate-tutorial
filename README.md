@@ -1,3 +1,3 @@
 # Hibernate-tutorial
 
-![](image/hibernate_architecture.png)
+![](images/hibernate_architecture.png)
