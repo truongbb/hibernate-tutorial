@@ -28,7 +28,8 @@ public class Student {
     @Column(name = "classname", nullable = false)
     String className;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "GENDER_ID", cascade = CascadeType.REMOVE)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "GENDER_ID")
     Gender gender;
 
     @Transient

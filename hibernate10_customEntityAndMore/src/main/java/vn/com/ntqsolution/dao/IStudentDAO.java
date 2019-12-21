@@ -1,5 +1,6 @@
 package vn.com.ntqsolution.dao;
 
+import vn.com.ntqsolution.dto.StudentDto;
 import vn.com.ntqsolution.entity.Student;
 
 import java.util.List;
@@ -16,4 +17,6 @@ public interface IStudentDAO {
     boolean updateStudent(Student student);
 
     boolean deleteStudent(Student student);
+
+    List<StudentDto> getAllStudentDto();
 }

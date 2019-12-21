@@ -2,7 +2,12 @@ package vn.com.ntqsolution.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
+import org.hibernate.transform.Transformers;
+import org.hibernate.type.IntegerType;
+import org.hibernate.type.StringType;
+import vn.com.ntqsolution.dto.StudentDto;
 import vn.com.ntqsolution.entity.Student;
 import vn.com.ntqsolution.util.HibernateUtil;
 
@@ -92,6 +97,29 @@ public class StudentDAO implements IStudentDAO {
             session.close();
         }
         return false;
+    }
+
+    @Override
+    public List<StudentDto> getAllStudentDto() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+            String sql = "select id, fullname name, gender_value from student join gender on student.gender_id = gender.id";
+            NativeQuery sqlQuery = session.createSQLQuery(sql);
+
+            sqlQuery
+                    .addScalar("id", new IntegerType())
+                    .addScalar("name", new StringType())
+                    .addScalar("gender", new StringType())
+                    .setResultTransformer(Transformers.aliasToBean(StudentDto.class));
+
+            return sqlQuery.list();
+        } catch (HibernateException e) {
+            session.getTransaction().rollback();
+        } finally {
+            session.close();
+        }
+        return null;
     }
 
 }
