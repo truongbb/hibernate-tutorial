@@ -10,3 +10,4 @@
 06. [Hibernate 06 - Criteria](./06-criteria/src/main/java/com/github/truongbb/dao/StudentDAO.java)
 07. [Hibernate 07 - Parameter](./07-parameters/src/main/java/com/github/truongbb/dao/StudentDAO.java)
 08. [Hibernate 08 - Connection pool](./08-connection-pool/README.md)
+09. [Hibernate 09 - Caching](./09-caching/README.md)
