@@ -7,3 +7,4 @@
 03. [Hibernate 03 - Annotations](./03-annotation/src/main/java/com/github/truongbb/mainrun/MainRun.java)
 04. [Hibernate 04 - Session](./04-session/README.md)
 05. [Hibernate 05 - HQL and native SQL](./05-hql-and-native-sql/src/main/java/com/github/truongbb/dao/StudentDAO.java)
+06. [Hibernate 06 - Criteria](./06-criteria/src/main/java/com/github/truongbb/dao/StudentDAO.java)
