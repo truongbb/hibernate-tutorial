@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+    <property name="hibernate.connection.username">truongbb</property>
+    <property name="hibernate.connection.password">admin</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hibernate.connection.charSet">utf8</property>
+    <property name="hibernate.connection.characterEncoding">utf8</property>
+    <property name="hibernate.connection.useUnicode">true</property>
+    <property name="hibernate.connection.defaultNChar">true</property>
+
+    <!-- Cấu hình batch (đẩy dữ liệu theo một tập, tiết kiệm công) -->
+    <property name="hibernate.jdbc.batch_size">50</property>
+
+    <!-- Cấu hình c3p0 trong hibernate -->
+    <property name="connection.poolsize">2000</property>
+    <property name="hibernate.c3p0.min_size">10</property>
+    <property name="hibernate.c3p0.max_size">500</property>
+    <property name="hibernate.jdbc.batch_versioned_data">true</property>
+
+
+    <!-- Cấu hình sử dụng cache level2 và query cache -->
+    <property name="cache.use_second_level_cache">true</property>
+    <property name="cache.use_query_cache">true</property>
+    <property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+    <property name="net.sf.ehcache.configurationResourceName">ehcache.xml</property>
+
+    <mapping class="com.github.truongbb.bo.Student"/>
+  </session-factory>
+</hibernate-configuration>
