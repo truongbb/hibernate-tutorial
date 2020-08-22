@@ -9,3 +9,4 @@
 05. [Hibernate 05 - HQL and native SQL](./05-hql-and-native-sql/src/main/java/com/github/truongbb/dao/StudentDAO.java)
 06. [Hibernate 06 - Criteria](./06-criteria/src/main/java/com/github/truongbb/dao/StudentDAO.java)
 07. [Hibernate 07 - Parameter](./07-parameters/src/main/java/com/github/truongbb/dao/StudentDAO.java)
+08. [Hibernate 08 - Connection pool](./08-connection-pool/README.md)
