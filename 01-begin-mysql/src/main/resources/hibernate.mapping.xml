@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.github.truongbb.bo.Student" table="student">
+    <id name="id" type="int" column="id">
+      <generator class="native"/>
+    </id>
+
+    <property name="fullName" column="fullName" type="string"/>
+    <property name="className" column="className" type="string"/>
+    <property name="birthday" column="birthday" type="date"/>
+  </class>
+</hibernate-mapping>
