@@ -1,7 +1,5 @@
 # Hibernate-tutorial
 
-![](images/hibernate_architecture.png)
-
 01. [Hibernate 01 - Begin MySQL](./01-begin-mysql/src/main/java/com/github/truongbb/mainrun/MainRun.java)
 02. [Hibernate 02 - Begin Oracle](./02-begin-oracle/src/main/java/com/github/truongbb/run/MainRun.java)
 03. [Hibernate 03 - Annotations](./03-annotation/src/main/java/com/github/truongbb/mainrun/MainRun.java)
@@ -12,3 +10,6 @@
 08. [Hibernate 08 - Connection pool](./08-connection-pool/README.md)
 09. [Hibernate 09 - Caching](./09-caching/README.md)
 10. [Hibernate 10 - Custom entity](./10-custom-entity/README.md)
+
+![](images/hibernate_architecture.png)
+
