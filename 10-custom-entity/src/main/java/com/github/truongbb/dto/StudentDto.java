@@ -1,4 +1,4 @@
-package vn.com.ntqsolution.dto;
+package com.github.truongbb.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -6,13 +6,12 @@ import lombok.experimental.FieldDefaults;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class StudentDto {
 
-    int id;
-    String name;
-    String gender;
+  int id;
+  String name;
+  String gender;
 
 
 }
